@@ -20,6 +20,7 @@
         <div class="d-flex justify-content-between align-items-center">
           <p><strong>"<%= bookmark.comment %>"</strong></p>
           <% if bookmark.present? %>
+            <%# TODO You need to fix this part! use turbo_method inside data {} %>
             <%= link_to bookmark_path(bookmark),
                         method: :delete,
                         data: { turbo_confirm: "Are you sure you want to remove #{movie.title} from your #{@list.name} list?" },
